@@ -59,6 +59,30 @@ npm run build
 npm run preview
 ```
 
+## 🚀 Deployment
+
+### GitHub Pages
+
+Die Anwendung ist für automatisches Deployment auf GitHub Pages konfiguriert.
+
+**Setup:**
+
+1. Gehe zu deinem GitHub Repository Settings
+2. Navigiere zu **Settings** → **Pages**
+3. Unter **Source** wähle: **GitHub Actions**
+4. Die Seite wird automatisch bei jedem Push zum `main` oder `claude/trend-word-cloud-site-01YEs7HZdxukmSqfrrj7Wsga` Branch deployed
+
+**Workflow:**
+- Bei jedem Push wird automatisch der Build-Prozess gestartet
+- Die GitHub Action (`deploy.yml`) baut die Anwendung
+- Das Build-Artefakt wird auf GitHub Pages veröffentlicht
+- Die Seite ist erreichbar unter: `https://<username>.github.io/vibe-coding-test/`
+
+**Manuelles Deployment:**
+- Gehe zu **Actions** Tab im Repository
+- Wähle den "Deploy to GitHub Pages" Workflow
+- Klicke auf "Run workflow" für ein manuelles Deployment
+
 ## 📁 Projektstruktur
 
 ```
