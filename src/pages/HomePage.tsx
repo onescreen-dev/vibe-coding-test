@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import WordCloudComponent from '../components/WordCloudComponent';
 import FilterBar from '../components/FilterBar';
 import SearchBar from '../components/SearchBar';
@@ -6,6 +7,7 @@ import type { FilterState } from '../types';
 import { getKeywordsByFilter } from '../data/mockData';
 
 export default function HomePage() {
+  const { t } = useTranslation();
   const [filters, setFilters] = useState<FilterState>({
     continent: 'global',
     region: '',
@@ -38,12 +40,11 @@ export default function HomePage() {
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 mb-4">
-            Discover Global Trends
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-4">
+            {t('home.hero_title')}
           </h2>
-          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-            Explore the most relevant topics shaping our world. Size indicates importance and reach.
-            Click any keyword to dive deeper.
+          <p className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto">
+            {t('home.hero_subtitle')}
           </p>
         </div>
 
@@ -55,38 +56,37 @@ export default function HomePage() {
 
         {/* Results Info */}
         <div className="mb-6 text-center">
-          <p className="text-slate-600 dark:text-slate-400">
-            Showing <span className="font-semibold text-primary-600">{filteredKeywords.length}</span> trending topics
+          <p className="text-slate-700">
+            {t('home.showing')} <span className="font-semibold text-sky-600">{filteredKeywords.length}</span> {t('home.trending_topics')}
             {filters.continent !== 'global' && (
-              <span> in <span className="font-semibold">{filters.continent}</span></span>
+              <span> {t('home.in')} <span className="font-semibold">{t(`continents.${filters.continent}`)}</span></span>
             )}
           </p>
         </div>
 
         {/* Word Cloud */}
-        <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 md:p-12 min-h-[500px] flex items-center justify-center">
+        <div className="bg-white rounded-lg shadow-xl border-2 border-sky-100 p-6 md:p-12 min-h-[500px] flex items-center justify-center">
           {filteredKeywords.length > 0 ? (
             <WordCloudComponent keywords={filteredKeywords} />
           ) : (
             <div className="text-center">
-              <p className="text-xl text-slate-500 dark:text-slate-400">
-                No trends found matching your filters.
+              <p className="text-xl text-slate-600">
+                {t('home.no_trends')}
               </p>
-              <p className="text-sm text-slate-400 dark:text-slate-500 mt-2">
-                Try adjusting your filters or search terms.
+              <p className="text-sm text-slate-500 mt-2">
+                {t('home.try_adjusting')}
               </p>
             </div>
           )}
         </div>
 
         {/* Footer Info */}
-        <div className="mt-8 text-center text-sm text-slate-500 dark:text-slate-400">
+        <div className="mt-8 text-center text-sm text-slate-600">
           <p>
-            Data sources: Reuters, BBC News, Bloomberg, The Guardian, Financial Times,
-            TechCrunch, CNBC, Wall Street Journal, and other leading global news outlets
+            {t('home.data_sources')}
           </p>
           <p className="mt-2">
-            Updated daily • Last update: December 10, 2025
+            {t('home.updated_daily')} • {t('home.last_update')}: {new Date().toLocaleDateString()}
           </p>
         </div>
       </div>

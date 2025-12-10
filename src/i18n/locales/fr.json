@@ -1,0 +1,81 @@
+{
+  "header": {
+    "title": "Tendances Mondiales",
+    "subtitle": "Suivez les développements économiques, politiques et sociaux dans le monde"
+  },
+  "home": {
+    "hero_title": "Découvrez les tendances mondiales",
+    "hero_subtitle": "Explorez les sujets les plus pertinents qui façonnent notre monde. La taille indique l'importance et la portée. Cliquez sur un mot-clé pour en savoir plus.",
+    "showing": "Affichage de",
+    "trending_topics": "sujets tendance",
+    "in": "en",
+    "no_trends": "Aucune tendance trouvée correspondant à vos filtres.",
+    "try_adjusting": "Essayez d'ajuster vos filtres ou vos termes de recherche.",
+    "data_sources": "Sources de données : Le Monde, Le Figaro, France 24, AFP, Libération, Reuters, BBC News et autres grands médias français et internationaux",
+    "updated_daily": "Mis à jour quotidiennement",
+    "last_update": "Dernière mise à jour"
+  },
+  "search": {
+    "placeholder": "Rechercher des tendances..."
+  },
+  "filters": {
+    "continent": "Continent",
+    "region": "Région",
+    "category": "Catégorie",
+    "all_continents": "Tous les continents",
+    "select_region": "Sélectionner une région",
+    "all_categories": "Toutes les catégories"
+  },
+  "detail": {
+    "back": "Retour aux tendances",
+    "category": "Catégorie",
+    "relevance": "Score de pertinence",
+    "geographic": "Couverture géographique",
+    "related_articles": "Articles et analyses associés",
+    "no_articles": "Aucun article trouvé pour ce mot-clé.",
+    "source": "Source",
+    "read_full": "Lire l'article complet",
+    "explore_related": "Explorer les tendances associées"
+  },
+  "continents": {
+    "global": "Mondial",
+    "europe": "Europe",
+    "north-america": "Amérique du Nord",
+    "asia": "Asie",
+    "africa": "Afrique",
+    "south-america": "Amérique du Sud",
+    "oceania": "Océanie"
+  },
+  "categories": {
+    "technology": "Technologie et innovation",
+    "economics": "Économie et finance",
+    "politics": "Politique et gouvernance",
+    "environment": "Environnement et climat",
+    "health": "Santé et médecine",
+    "society": "Société et culture",
+    "energy": "Énergie et ressources",
+    "security": "Sécurité et défense",
+    "trade": "Commerce international",
+    "innovation": "Science et recherche",
+    "urbanization": "Développement urbain",
+    "education": "Éducation et compétences",
+    "transportation": "Transport et mobilité",
+    "agriculture": "Agriculture et alimentation",
+    "media": "Médias et communications",
+    "legal": "Droit et réglementation",
+    "migration": "Migration et démographie",
+    "space": "Espace et aéronautique",
+    "cybersecurity": "Cybersécurité",
+    "ai": "Intelligence artificielle",
+    "crypto": "Blockchain et crypto",
+    "workforce": "Avenir du travail",
+    "inequality": "Inégalités sociales",
+    "entertainment": "Divertissement et arts",
+    "sports": "Sports et événements",
+    "tourism": "Tourisme et hôtellerie",
+    "retail": "Commerce de détail et e-commerce",
+    "manufacturing": "Fabrication et industrie",
+    "real-estate": "Immobilier et logement",
+    "human-rights": "Droits de l'homme"
+  }
+}

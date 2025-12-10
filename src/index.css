@@ -4,8 +4,8 @@
 
 @layer base {
   body {
-    @apply bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800;
-    @apply text-slate-900 dark:text-slate-100;
+    @apply bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50;
+    @apply text-slate-800;
   }
 }
 
@@ -15,11 +15,12 @@
   }
 
   .filter-button {
-    @apply px-4 py-2 rounded-lg border-2 border-slate-300 dark:border-slate-600
-           hover:border-primary-500 transition-all duration-200 text-sm font-medium;
+    @apply px-4 py-2 rounded-lg border-2 border-sky-200
+           hover:border-sky-400 hover:bg-sky-50 transition-all duration-200 text-sm font-medium
+           text-slate-700 bg-white shadow-sm;
   }
 
   .filter-button.active {
-    @apply bg-primary-500 text-white border-primary-500;
+    @apply bg-gradient-to-r from-sky-500 to-blue-600 text-white border-sky-500 shadow-md;
   }
 }
