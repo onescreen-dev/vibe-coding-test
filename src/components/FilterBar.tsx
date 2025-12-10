@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FiFilter, FiX, FiChevronDown } from 'react-icons/fi';
 import { continents, regions, categories } from '../data/mockData';
 import type { FilterState } from '../types';
@@ -9,6 +10,7 @@ interface FilterBarProps {
 }
 
 export default function FilterBar({ filters, onFilterChange }: FilterBarProps) {
+  const { t } = useTranslation();
   const [showFilters, setShowFilters] = useState(false);
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
 
@@ -47,17 +49,17 @@ export default function FilterBar({ filters, onFilterChange }: FilterBarProps) {
   const selectedCategory = categories.find(c => c.id === filters.category);
 
   return (
-    <div className="bg-white dark:bg-slate-800 shadow-md rounded-lg mb-6">
+    <div className="bg-white shadow-lg rounded-lg mb-6 border-2 border-sky-100">
       <div className="p-4">
         <div className="flex items-center justify-between mb-4">
           <button
             onClick={() => setShowFilters(!showFilters)}
-            className="flex items-center gap-2 text-slate-700 dark:text-slate-300 hover:text-primary-600 transition-colors"
+            className="flex items-center gap-2 text-slate-700 hover:text-sky-600 transition-colors"
           >
             <FiFilter className="w-5 h-5" />
-            <span className="font-medium">Filters</span>
+            <span className="font-medium">{t('filters.continent')}</span>
             {hasActiveFilters && (
-              <span className="bg-primary-500 text-white text-xs px-2 py-1 rounded-full">
+              <span className="bg-gradient-to-r from-sky-500 to-blue-600 text-white text-xs px-2 py-1 rounded-full">
                 Active
               </span>
             )}
@@ -74,11 +76,11 @@ export default function FilterBar({ filters, onFilterChange }: FilterBarProps) {
         </div>
 
         {showFilters && (
-          <div className="space-y-6 border-t border-slate-200 dark:border-slate-700 pt-4">
+          <div className="space-y-6 border-t border-sky-200 pt-4">
             {/* Continent Filter */}
             <div>
-              <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
-                Geography
+              <h3 className="text-sm font-semibold text-slate-700 mb-3">
+                {t('filters.continent')}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {continents.map(continent => (
@@ -89,7 +91,7 @@ export default function FilterBar({ filters, onFilterChange }: FilterBarProps) {
                       filters.continent === continent.id ? 'active' : ''
                     }`}
                   >
-                    {continent.name}
+                    {t(`continents.${continent.id}`)}
                   </button>
                 ))}
               </div>
@@ -98,8 +100,8 @@ export default function FilterBar({ filters, onFilterChange }: FilterBarProps) {
             {/* Region Filter */}
             {filters.continent !== 'global' && availableRegions.length > 0 && (
               <div>
-                <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
-                  Country
+                <h3 className="text-sm font-semibold text-slate-700 mb-3">
+                  {t('filters.region')}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {availableRegions.map(region => (
@@ -119,34 +121,34 @@ export default function FilterBar({ filters, onFilterChange }: FilterBarProps) {
 
             {/* Category Filter */}
             <div>
-              <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
-                Topics (Top 30)
+              <h3 className="text-sm font-semibold text-slate-700 mb-3">
+                {t('filters.category')}
               </h3>
               <div className="relative">
                 <button
                   onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}
                   className="w-full md:w-auto filter-button flex items-center justify-between gap-2 min-w-[200px]"
                 >
-                  <span>{selectedCategory ? selectedCategory.name : 'All Topics'}</span>
+                  <span>{selectedCategory ? t(`categories.${selectedCategory.id}`) : t('filters.all_categories')}</span>
                   <FiChevronDown className="w-4 h-4" />
                 </button>
                 {showCategoryDropdown && (
-                  <div className="absolute z-10 mt-2 w-full md:w-96 bg-white dark:bg-slate-700 rounded-lg shadow-xl max-h-96 overflow-y-auto">
+                  <div className="absolute z-10 mt-2 w-full md:w-96 bg-white rounded-lg shadow-xl border-2 border-sky-100 max-h-96 overflow-y-auto">
                     <button
                       onClick={() => handleCategoryChange('')}
-                      className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-600 border-b border-slate-200 dark:border-slate-600"
+                      className="w-full text-left px-4 py-3 hover:bg-sky-50 border-b border-sky-100"
                     >
-                      <span className="font-medium">All Topics</span>
+                      <span className="font-medium">{t('filters.all_categories')}</span>
                     </button>
                     {categories.slice(0, 30).map(category => (
                       <button
                         key={category.id}
                         onClick={() => handleCategoryChange(category.id)}
-                        className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-600 border-b border-slate-200 dark:border-slate-600 last:border-b-0"
+                        className="w-full text-left px-4 py-3 hover:bg-sky-50 border-b border-sky-100 last:border-b-0"
                       >
                         <div className="flex items-center justify-between">
-                          <span className="font-medium text-sm">{category.name}</span>
-                          <span className="text-xs text-slate-500 dark:text-slate-400">
+                          <span className="font-medium text-sm">{t(`categories.${category.id}`)}</span>
+                          <span className="text-xs text-slate-500">
                             {category.count}
                           </span>
                         </div>

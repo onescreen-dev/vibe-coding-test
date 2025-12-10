@@ -1,0 +1,81 @@
+{
+  "header": {
+    "title": "Globale Trends",
+    "subtitle": "Verfolgen Sie wirtschaftliche, politische und soziale Entwicklungen weltweit"
+  },
+  "home": {
+    "hero_title": "Entdecken Sie globale Trends",
+    "hero_subtitle": "Erkunden Sie die wichtigsten Themen, die unsere Welt prägen. Die Größe zeigt Bedeutung und Reichweite an. Klicken Sie auf ein Schlagwort, um tiefer einzutauchen.",
+    "showing": "Zeige",
+    "trending_topics": "Trendthemen",
+    "in": "in",
+    "no_trends": "Keine Trends gefunden, die Ihren Filtern entsprechen.",
+    "try_adjusting": "Versuchen Sie, Ihre Filter oder Suchbegriffe anzupassen.",
+    "data_sources": "Datenquellen: Der Spiegel, FAZ, Süddeutsche Zeitung, Tagesschau, Handelsblatt, Reuters, BBC News, und andere führende deutschsprachige und internationale Nachrichtenquellen",
+    "updated_daily": "Täglich aktualisiert",
+    "last_update": "Letzte Aktualisierung"
+  },
+  "search": {
+    "placeholder": "Trends durchsuchen..."
+  },
+  "filters": {
+    "continent": "Kontinent",
+    "region": "Region",
+    "category": "Kategorie",
+    "all_continents": "Alle Kontinente",
+    "select_region": "Region auswählen",
+    "all_categories": "Alle Kategorien"
+  },
+  "detail": {
+    "back": "Zurück zu Trends",
+    "category": "Kategorie",
+    "relevance": "Relevanzbewertung",
+    "geographic": "Geografische Abdeckung",
+    "related_articles": "Verwandte Artikel & Einblicke",
+    "no_articles": "Keine Artikel für dieses Schlagwort gefunden.",
+    "source": "Quelle",
+    "read_full": "Vollständigen Artikel lesen",
+    "explore_related": "Verwandte Trends erkunden"
+  },
+  "continents": {
+    "global": "Global",
+    "europe": "Europa",
+    "north-america": "Nordamerika",
+    "asia": "Asien",
+    "africa": "Afrika",
+    "south-america": "Südamerika",
+    "oceania": "Ozeanien"
+  },
+  "categories": {
+    "technology": "Technologie & Innovation",
+    "economics": "Wirtschaft & Finanzen",
+    "politics": "Politik & Regierung",
+    "environment": "Umwelt & Klima",
+    "health": "Gesundheit & Medizin",
+    "society": "Gesellschaft & Kultur",
+    "energy": "Energie & Ressourcen",
+    "security": "Sicherheit & Verteidigung",
+    "trade": "Internationaler Handel",
+    "innovation": "Wissenschaft & Forschung",
+    "urbanization": "Stadtentwicklung",
+    "education": "Bildung & Kompetenzen",
+    "transportation": "Transport & Mobilität",
+    "agriculture": "Landwirtschaft & Ernährung",
+    "media": "Medien & Kommunikation",
+    "legal": "Recht & Regulierung",
+    "migration": "Migration & Demografie",
+    "space": "Raumfahrt & Luft",
+    "cybersecurity": "Cybersicherheit",
+    "ai": "Künstliche Intelligenz",
+    "crypto": "Blockchain & Krypto",
+    "workforce": "Zukunft der Arbeit",
+    "inequality": "Soziale Ungleichheit",
+    "entertainment": "Unterhaltung & Kunst",
+    "sports": "Sport & Veranstaltungen",
+    "tourism": "Tourismus & Gastgewerbe",
+    "retail": "Einzelhandel & E-Commerce",
+    "manufacturing": "Fertigung & Industrie",
+    "real-estate": "Immobilien & Wohnen",
+    "human-rights": "Menschenrechte"
+  }
+}

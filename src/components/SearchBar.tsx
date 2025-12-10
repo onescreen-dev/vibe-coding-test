@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FiSearch } from 'react-icons/fi';
 
 interface SearchBarProps {
@@ -7,6 +8,7 @@ interface SearchBarProps {
 }
 
 export default function SearchBar({ onSearch, initialValue = '' }: SearchBarProps) {
+  const { t } = useTranslation();
   const [query, setQuery] = useState(initialValue);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -17,16 +19,16 @@ export default function SearchBar({ onSearch, initialValue = '' }: SearchBarProp
   return (
     <form onSubmit={handleSubmit} className="w-full mb-6">
       <div className="relative">
-        <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+        <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-sky-500 w-5 h-5" />
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search for trends, topics, and keywords..."
-          className="w-full pl-12 pr-4 py-4 rounded-lg border-2 border-slate-300 dark:border-slate-600
-                   focus:border-primary-500 focus:outline-none transition-colors
-                   bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100
-                   placeholder-slate-400 dark:placeholder-slate-500"
+          placeholder={t('search.placeholder')}
+          className="w-full pl-12 pr-4 py-4 rounded-lg border-2 border-sky-200
+                   focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-200 transition-all
+                   bg-white text-slate-800
+                   placeholder-slate-400 shadow-sm"
         />
       </div>
     </form>

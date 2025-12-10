@@ -1,0 +1,81 @@
+{
+  "header": {
+    "title": "全球趋势",
+    "subtitle": "追踪全球经济、政治和社会发展"
+  },
+  "home": {
+    "hero_title": "探索全球趋势",
+    "hero_subtitle": "探索塑造我们世界的最相关主题。大小表示重要性和影响范围。点击任何关键词深入了解。",
+    "showing": "显示",
+    "trending_topics": "个热门话题",
+    "in": "在",
+    "no_trends": "未找到符合您筛选条件的趋势。",
+    "try_adjusting": "请尝试调整您的筛选条件或搜索词。",
+    "data_sources": "数据来源：新华社、人民日报、中央电视台、南华早报、环球时报、路透社、BBC新闻以及其他领先的中文和国际新闻媒体",
+    "updated_daily": "每日更新",
+    "last_update": "最后更新"
+  },
+  "search": {
+    "placeholder": "搜索趋势..."
+  },
+  "filters": {
+    "continent": "大洲",
+    "region": "地区",
+    "category": "类别",
+    "all_continents": "所有大洲",
+    "select_region": "选择地区",
+    "all_categories": "所有类别"
+  },
+  "detail": {
+    "back": "返回趋势",
+    "category": "类别",
+    "relevance": "相关性评分",
+    "geographic": "地理覆盖范围",
+    "related_articles": "相关文章与见解",
+    "no_articles": "未找到此关键词的文章。",
+    "source": "来源",
+    "read_full": "阅读完整文章",
+    "explore_related": "探索相关趋势"
+  },
+  "continents": {
+    "global": "全球",
+    "europe": "欧洲",
+    "north-america": "北美洲",
+    "asia": "亚洲",
+    "africa": "非洲",
+    "south-america": "南美洲",
+    "oceania": "大洋洲"
+  },
+  "categories": {
+    "technology": "技术与创新",
+    "economics": "经济与金融",
+    "politics": "政治与治理",
+    "environment": "环境与气候",
+    "health": "健康与医学",
+    "society": "社会与文化",
+    "energy": "能源与资源",
+    "security": "安全与国防",
+    "trade": "国际贸易",
+    "innovation": "科学与研究",
+    "urbanization": "城市发展",
+    "education": "教育与技能",
+    "transportation": "交通与出行",
+    "agriculture": "农业与食品",
+    "media": "媒体与通信",
+    "legal": "法律与监管",
+    "migration": "移民与人口",
+    "space": "太空与航空",
+    "cybersecurity": "网络安全",
+    "ai": "人工智能",
+    "crypto": "区块链与加密货币",
+    "workforce": "未来工作",
+    "inequality": "社会不平等",
+    "entertainment": "娱乐与艺术",
+    "sports": "体育与赛事",
+    "tourism": "旅游与酒店",
+    "retail": "零售与电商",
+    "manufacturing": "制造与工业",
+    "real-estate": "房地产与住房",
+    "human-rights": "人权"
+  }
+}
