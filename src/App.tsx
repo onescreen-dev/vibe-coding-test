@@ -6,7 +6,7 @@ import KeywordDetailPage from './pages/KeywordDetailPage';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50">
+      <div className="min-h-screen bg-politico-lightGray">
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
