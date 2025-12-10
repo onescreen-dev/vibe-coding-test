@@ -1,13 +1,14 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { FiArrowLeft, FiExternalLink, FiCalendar, FiMapPin } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
-import { keywords, articles, categories } from '../data/mockData';
+import { getActiveKeywords, articles, categories } from '../data/mockData';
 
 export default function KeywordDetailPage() {
   const { t, i18n } = useTranslation();
   const { keyword } = useParams<{ keyword: string }>();
   const navigate = useNavigate();
 
+  const keywords = getActiveKeywords();
   const decodedKeyword = decodeURIComponent(keyword || '');
   const keywordData = keywords.find(
     k => k.text.toLowerCase() === decodedKeyword.toLowerCase()

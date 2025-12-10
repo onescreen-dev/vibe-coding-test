@@ -6,6 +6,7 @@ Eine moderne, interaktive Webseite für Trendforscher, die gesellschaftlich rele
 
 ### Kernfunktionalität
 - **Interactive Word Cloud**: Schlagwörter werden nach Relevanz skaliert dargestellt
+- **Automatic Keyword Generation**: Intelligente Extraktion und Bewertung von Keywords aus Artikeln
 - **Geographic Filtering**: Filter nach Kontinenten und Ländern
 - **Topic Clustering**: 30+ Themenkategorien (Economics, Technology, Politics, Environment, etc.)
 - **Search Function**: Volltext-Suche über alle Trends und Keywords
@@ -159,6 +160,19 @@ Die Plattform aggregiert Daten von führenden globalen Nachrichtenportalen:
 - Related Keywords
 - Direkte Links zu Originalartikel
 
+## 🤖 Automatische Keyword-Generierung
+
+Dieses Projekt enthält eine vollautomatische Keyword-Generierung, die aus Nachrichtenartikeln intelligente Schlagwörter extrahiert:
+
+- **NLP-basierte Extraktion**: Erkennt wichtige Ein-, Zwei- und Drei-Wort-Phrasen
+- **Intelligentes Scoring**: Bewertet Keywords nach Häufigkeit, Position und Relevanz
+- **Automatische Kategorisierung**: Ordnet Keywords automatisch Themenkategorien zu
+- **Geografische Zuordnung**: Erkennt regionale und globale Trends
+
+**📚 Ausführliche Dokumentation**: Siehe [KEYWORD_GENERATION.md](./KEYWORD_GENERATION.md)
+
+**Aktivierung**: In `src/data/mockData.ts` die Variable `USE_AUTO_GENERATED_KEYWORDS` auf `true` setzen.
+
 ## 🔄 Zukünftige Erweiterungen
 
 - Live-Daten-Integration mit News APIs
@@ -168,6 +182,7 @@ Die Plattform aggregiert Daten von führenden globalen Nachrichtenportalen:
 - Multi-Language Support
 - Dark Mode Toggle
 - Trend-Analyse-Dashboard mit Charts
+- Machine Learning für bessere Keyword-Qualität
 
 ## 📝 Lizenz
 
