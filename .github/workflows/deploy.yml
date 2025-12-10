@@ -5,6 +5,10 @@ on:
     branches:
       - main
       - claude/trend-word-cloud-site-01YEs7HZdxukmSqfrrj7Wsga
+      - claude/light-ui-language-support-013164xEYkS1WS2uSvDXJh1L
+  schedule:
+    # Run daily at 2:00 AM UTC to update content
+    - cron: '0 2 * * *'
   workflow_dispatch:
 
 permissions:
