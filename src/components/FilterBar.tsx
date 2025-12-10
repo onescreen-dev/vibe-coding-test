@@ -49,17 +49,17 @@ export default function FilterBar({ filters, onFilterChange }: FilterBarProps) {
   const selectedCategory = categories.find(c => c.id === filters.category);
 
   return (
-    <div className="bg-white shadow-lg rounded-lg mb-6 border-2 border-sky-100">
+    <div className="bg-white shadow-sm mb-6 border border-gray-200">
       <div className="p-4">
         <div className="flex items-center justify-between mb-4">
           <button
             onClick={() => setShowFilters(!showFilters)}
-            className="flex items-center gap-2 text-slate-700 hover:text-sky-600 transition-colors"
+            className="flex items-center gap-2 text-slate-800 hover:text-politico-red transition-colors font-semibold"
           >
             <FiFilter className="w-5 h-5" />
-            <span className="font-medium">{t('filters.continent')}</span>
+            <span className="uppercase tracking-wide text-sm">{t('filters.continent')}</span>
             {hasActiveFilters && (
-              <span className="bg-gradient-to-r from-sky-500 to-blue-600 text-white text-xs px-2 py-1 rounded-full">
+              <span className="bg-politico-red text-white text-xs px-2 py-1 rounded uppercase tracking-wide">
                 Active
               </span>
             )}
@@ -67,7 +67,7 @@ export default function FilterBar({ filters, onFilterChange }: FilterBarProps) {
           {hasActiveFilters && (
             <button
               onClick={clearFilters}
-              className="flex items-center gap-1 text-sm text-red-600 hover:text-red-700 transition-colors"
+              className="flex items-center gap-1 text-sm text-politico-red hover:text-politico-darkRed transition-colors font-medium"
             >
               <FiX className="w-4 h-4" />
               Clear all
@@ -76,10 +76,10 @@ export default function FilterBar({ filters, onFilterChange }: FilterBarProps) {
         </div>
 
         {showFilters && (
-          <div className="space-y-6 border-t border-sky-200 pt-4">
+          <div className="space-y-6 border-t border-gray-300 pt-4">
             {/* Continent Filter */}
             <div>
-              <h3 className="text-sm font-semibold text-slate-700 mb-3">
+              <h3 className="text-sm font-bold text-politico-darkGray mb-3 uppercase tracking-wide">
                 {t('filters.continent')}
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -100,7 +100,7 @@ export default function FilterBar({ filters, onFilterChange }: FilterBarProps) {
             {/* Region Filter */}
             {filters.continent !== 'global' && availableRegions.length > 0 && (
               <div>
-                <h3 className="text-sm font-semibold text-slate-700 mb-3">
+                <h3 className="text-sm font-bold text-politico-darkGray mb-3 uppercase tracking-wide">
                   {t('filters.region')}
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -121,7 +121,7 @@ export default function FilterBar({ filters, onFilterChange }: FilterBarProps) {
 
             {/* Category Filter */}
             <div>
-              <h3 className="text-sm font-semibold text-slate-700 mb-3">
+              <h3 className="text-sm font-bold text-politico-darkGray mb-3 uppercase tracking-wide">
                 {t('filters.category')}
               </h3>
               <div className="relative">
@@ -133,10 +133,10 @@ export default function FilterBar({ filters, onFilterChange }: FilterBarProps) {
                   <FiChevronDown className="w-4 h-4" />
                 </button>
                 {showCategoryDropdown && (
-                  <div className="absolute z-10 mt-2 w-full md:w-96 bg-white rounded-lg shadow-xl border-2 border-sky-100 max-h-96 overflow-y-auto">
+                  <div className="absolute z-10 mt-2 w-full md:w-96 bg-white shadow-xl border border-gray-300 max-h-96 overflow-y-auto">
                     <button
                       onClick={() => handleCategoryChange('')}
-                      className="w-full text-left px-4 py-3 hover:bg-sky-50 border-b border-sky-100"
+                      className="w-full text-left px-4 py-3 hover:bg-red-50 border-b border-gray-200"
                     >
                       <span className="font-medium">{t('filters.all_categories')}</span>
                     </button>
@@ -144,11 +144,11 @@ export default function FilterBar({ filters, onFilterChange }: FilterBarProps) {
                       <button
                         key={category.id}
                         onClick={() => handleCategoryChange(category.id)}
-                        className="w-full text-left px-4 py-3 hover:bg-sky-50 border-b border-sky-100 last:border-b-0"
+                        className="w-full text-left px-4 py-3 hover:bg-red-50 border-b border-gray-200 last:border-b-0"
                       >
                         <div className="flex items-center justify-between">
                           <span className="font-medium text-sm">{t(`categories.${category.id}`)}</span>
-                          <span className="text-xs text-slate-500">
+                          <span className="text-xs text-gray-500">
                             {category.count}
                           </span>
                         </div>
