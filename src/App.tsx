@@ -5,7 +5,7 @@ import KeywordDetailPage from './pages/KeywordDetailPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/vibe-coding-test">
       <div className="min-h-screen bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50">
         <Header />
         <Routes>
